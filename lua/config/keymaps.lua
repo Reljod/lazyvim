@@ -22,3 +22,18 @@ keymap.set(
   [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "Search and Replace Current Word in File" }
 )
+
+-- Harpoon
+keymap.set("n", "<leader>ha", function()
+  require("harpoon"):list():add()
+end, { desc = "Harpoon a file" })
+keymap.set("n", "<leader>hh", function()
+  local harpoon = require("harpoon")
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end, { desc = "Harpoon Quick Menu" })
+
+for i = 1, 9 do
+  keymap.set("n", "<leader>" .. i, function()
+    require("harpoon"):list():select(i)
+  end, { desc = "Select harpoon [" .. i .. "]" })
+end
