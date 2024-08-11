@@ -15,6 +15,8 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "}", "}zz", { desc = "Move paragraph forward and re-center" })
+keymap.set("n", "{", "{zz", { desc = "Move paragraph forward and re-center" })
 -- Search and Replace current word in the file
 keymap.set(
   "n",
