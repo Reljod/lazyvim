@@ -20,7 +20,7 @@ keymap.set("n", "{", "{zz", { desc = "Move paragraph forward and re-center" })
 -- Search and Replace current word in the file
 keymap.set(
   "n",
-  "<leader>sR",
+  "<leader>se",
   [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "Search and Replace Current Word in File" }
 )
