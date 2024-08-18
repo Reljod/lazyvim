@@ -5,6 +5,9 @@
 -- Set leader key to space
 local keymap = vim.keymap
 
+-- Disable LazyVim keymaps here
+keymap.del("n", "<leader>w") -- disable window leader keymap
+
 -- General keymaps
 keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "Save and quit current file" }) -- save and quit
 keymap.set("n", "<leader>qq", ":q<CR>", { desc = "Quit file" }) -- quit
